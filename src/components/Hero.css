@@ -1,0 +1,102 @@
+.hero {
+  text-align: center;
+  padding: 4rem 5%;
+  background: linear-gradient(180deg, #fff, #fff8e1);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-order {
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+  color: #000;
+}
+
+.btn-order:hover {
+  transform: translateY(-3px);
+}
+
+.btn-gallery {
+  background: transparent;
+  border: 2px solid #ffc107;
+  color: #333;
+}
+
+.btn-gallery:hover {
+  background: #ffc107;
+  color: #000;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .btn-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+}

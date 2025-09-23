@@ -1,0 +1,153 @@
+.clothing-page {
+  padding: 3rem 8%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hero Section */
+.clothing-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.clothing-hero h1 {
+  font-size: 2.5rem;
+  color: #f8b400;
+}
+.clothing-hero p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* Sections */
+.clothing-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+.clothing-section.reverse {
+  flex-direction: row-reverse;
+}
+.clothing-text {
+  flex: 1;
+}
+.clothing-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.clothing-text p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+.clothing-text ul {
+  list-style: none;
+  padding: 0;
+}
+.clothing-text ul li {
+  margin: 0.5rem 0;
+  font-weight: 500;
+  color: #444;
+}
+.clothing-image {
+  flex: 1;
+}
+.clothing-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Closing Section */
+.clothing-closing {
+  text-align: center;
+  margin-top: 4rem;
+}
+.clothing-closing h2 {
+  font-size: 2rem;
+  color: #f8b400;
+}
+.clothing-closing p {
+  color: #555;
+  margin: 1rem 0 2rem;
+}
+.explore-btn {
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.explore-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive Breakpoints */
+@media (max-width: 992px) {
+  .clothing-hero h1 {
+    font-size: 2rem;
+  }
+  .clothing-hero p {
+    font-size: 1rem;
+  }
+  .clothing-section {
+    gap: 1.5rem;
+  }
+  .clothing-text h2 {
+    font-size: 1.5rem;
+  }
+  .clothing-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .clothing-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .clothing-section.reverse {
+    flex-direction: column;
+  }
+  .clothing-image img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .clothing-text h2 {
+    font-size: 1.4rem;
+  }
+  .clothing-text p,
+  .clothing-text ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clothing-page {
+    padding: 2rem 5%;
+  }
+  .clothing-hero h1 {
+    font-size: 1.6rem;
+  }
+  .clothing-hero p {
+    font-size: 0.9rem;
+  }
+  .clothing-text h2 {
+    font-size: 1.2rem;
+  }
+  .clothing-text p,
+  .clothing-text ul li {
+    font-size: 0.85rem;
+  }
+  .clothing-closing h2 {
+    font-size: 1.4rem;
+  }
+  .explore-btn {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+}
+ 
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+button { cursor: pointer; }
+
+header, .hero {
+  width: 100%;
+}
+
+/* -------------------------
+   Products Section Styling
+-------------------------- */
+.products-section {
+  text-align: center;
+  margin: 60px 0; /* upar niche spacing */
+  padding: 0 20px;
+}
+
+.products-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.products-subtext {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px auto; /* center + bottom space */
+  line-height: 1.5;
+}
+
+.products-subtext span {
+  font-weight: 600;
+  color: #222;
+}

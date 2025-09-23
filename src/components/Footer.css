@@ -1,0 +1,130 @@
+.footer {
+  background: #111; /* Dark background */
+  color: #facc15; /* Yellow text */
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.footer-brand span {
+  color: #facc15; /* yellow brand highlight */
+}
+
+.footer-brand p {
+  color: #ddd;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #facc15;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  color: #ddd;
+  margin: 6px 0;
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 18px;
+  color: #facc15;
+  transition: 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 20px;
+  }
+  .footer-brand h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px 15px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+    text-align: center;
+  }
+  .footer-links ul {
+    padding: 0;
+  }
+  .footer-social .social-icons a {
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Mobile: 1 column */
+    text-align: center;
+  }
+  .footer-brand h2 {
+    font-size: 20px;
+  }
+  .footer-links h3,
+  .footer-contact h3,
+  .footer-social h3 {
+    font-size: 16px;
+  }
+  .footer-contact p {
+    font-size: 13px;
+  }
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

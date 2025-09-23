@@ -1,0 +1,156 @@
+/* ===== Page Container ===== */
+.patches-page {
+  padding: 2rem 5%;
+}
+
+/* ===== Hero Section ===== */
+.patches-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.patches-hero h1 {
+  font-size: 2.2rem;
+  color: #f8b400;
+  margin-bottom: 1rem;
+}
+
+.patches-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===== Content Sections ===== */
+.patches-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.patches-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.patches-text {
+  flex: 1;
+}
+
+.patches-text h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.patches-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.patches-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.patches-text li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.patches-image {
+  flex: 1;
+}
+
+.patches-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Closing Section ===== */
+.patches-closing {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.patches-closing h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.patches-closing p {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.explore-btn {
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.explore-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+  .patches-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .patches-section {
+    gap: 1.5rem;
+  }
+
+  .patches-text h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .patches-section,
+  .patches-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .patches-text {
+    margin-top: 1rem;
+  }
+
+  .patches-text ul {
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .patches-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .patches-hero p {
+    font-size: 1rem;
+  }
+
+  .explore-btn {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+}

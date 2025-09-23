@@ -1,0 +1,88 @@
+.gallery-page {
+  padding: 20px;
+}
+
+.gallery-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* ✅ Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 👌 responsive fix */
+}
+
+.price {
+  font-weight: bold;
+  color: #2d6cdf;
+  margin: 6px 0;
+}
+
+.rating {
+  color: #ffa500;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-page h2 {
+    font-size: 1.6rem;
+  }
+  .gallery-grid {
+    gap: 15px;
+  }
+  .product-img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-page {
+    padding: 10px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 👈 mobile par ek column */
+    gap: 12px;
+  }
+  .product-img {
+    height: 200px; /* mobile ke liye thoda bara */
+  }
+}

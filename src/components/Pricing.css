@@ -1,0 +1,146 @@
+.pricing-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* Pricing Cards */
+.pricing-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+}
+
+.card span {
+  display: block;
+  font-size: 1.2rem;
+  color: #d9534f;
+}
+
+/* Stitch Pricing */
+.stitch-pricing {
+  margin: 3rem 0;
+}
+
+.examples {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.example {
+  padding: 1rem;
+  background: #fff3cd;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Additional Services */
+.additional-services {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.service {
+  flex: 1;
+  min-width: 200px;
+  padding: 1.2rem;
+  border-radius: 10px;
+  background: #f1f1f1;
+}
+
+.service span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Comparison Table */
+.comparison {
+  margin-top: 3rem;
+  overflow-x: auto; /* mobile me horizontal scroll avoid */
+}
+
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* mobile scroll ke liye */
+}
+
+.comparison th,
+.comparison td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* 📱 Responsive Media Queries */
+@media (max-width: 768px) {
+  .pricing-title {
+    font-size: 1.5rem;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .examples {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .additional-services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-title {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    min-width: 100%;
+  }
+
+  .example {
+    min-width: 100%;
+  }
+
+  .service {
+    min-width: 100%;
+  }
+}

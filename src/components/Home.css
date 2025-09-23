@@ -1,0 +1,49 @@
+/* Home.css */
+
+/* Products Section */
+.products-section {
+  padding: 4rem 8%;
+  background: #fff;
+  text-align: center;
+}
+
+.products-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #f8b400;
+}
+
+.products-subtext {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.products-subtext span {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .products-heading {
+    font-size: 1.75rem;
+  }
+  .products-subtext {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-section {
+    padding: 2rem 5%;
+  }
+  .products-heading {
+    font-size: 1.5rem;
+  }
+  .products-subtext {
+    font-size: 0.9rem;
+  }
+}
