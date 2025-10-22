@@ -35,22 +35,24 @@
 }
 
 .btn-order {
-  background: linear-gradient(90deg, #ffc107, #ff9800);
+  background: linear-gradient(90deg,#333 #333);
   color: #000;
 }
 
 .btn-order:hover {
   transform: translateY(-3px);
+  background: #000;
+  color: #fff;
 }
 
 .btn-gallery {
   background: transparent;
-  border: 2px solid #ffc107;
+  border: 2px solid #333;
   color: #333;
 }
 
 .btn-gallery:hover {
-  background: #ffc107;
+  background: #716f6f;
   color: #000;
 }
 

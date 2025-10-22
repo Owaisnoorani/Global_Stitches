@@ -31,7 +31,7 @@
 }
 
 .learn-more {
-  background: #ffc107;
+  background: #333;
   color: #fff;
   padding: 12px 24px;
   border: none;
@@ -42,7 +42,10 @@
 }
 
 .learn-more:hover {
-  background: #ff9800;
+  background: #fff;
+    color: #333;
+    border: #000;
+
 }
 
 .about-image {

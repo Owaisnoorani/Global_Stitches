@@ -34,7 +34,7 @@ const Header = () => {
 
       {/* Hamburger Menu Button */}
       <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
+        
       </div>
 
       <nav className={menuOpen ? "nav active" : "nav"}>

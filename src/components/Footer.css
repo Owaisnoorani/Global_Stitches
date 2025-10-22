@@ -19,7 +19,7 @@
 }
 
 .footer-brand span {
-  color: #facc15; /* yellow brand highlight */
+  color: #fff; /* yellow brand highlight */
 }
 
 .footer-brand p {
@@ -46,13 +46,13 @@
 }
 
 .footer-links a {
-  color: #facc15;
+  color: #fff;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: #716f6f;
 }
 
 .footer-contact p {
@@ -65,12 +65,12 @@
   display: inline-block;
   margin-right: 12px;
   font-size: 18px;
-  color: #facc15;
+  color: #fff;
   transition: 0.3s;
 }
 
 .footer-social .social-icons a:hover {
-  color: #fff;
+  color: #716f6f;
 }
 
 .footer-bottom {
