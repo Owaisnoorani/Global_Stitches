@@ -1,7 +1,10 @@
 .hero {
   text-align: center;
   padding: 4rem 5%;
-  background: linear-gradient(180deg, #fff, #fff8e1);
+  /* background: linear-gradient(180deg, #716f6f, #fff); */
+    background: linear-gradient(135deg, #f7f2ec 0%, #e8d6c8 40%, #b58e8e 75%, #716f6f 100%);
+
+    
 }
 
 .hero h2 {
