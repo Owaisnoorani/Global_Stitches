@@ -35,14 +35,14 @@ const Pricing = () => {
       </div>
 
       {/* Pay-Per-Stitch */}
-      <div className="stitch-pricing">
+      {/* <div className="stitch-pricing">
         <h3>Pay-Per-Stitch Pricing</h3>
         <p>$0.75–$1.50 per 1,000 stitches (minimum $8–$10)</p>
         <div className="examples">
           <div className="example">Example 1: 8,000 stitches → $8</div>
           <div className="example">Example 2: 20,000 stitches → $25</div>
         </div>
-      </div>
+      </div> */}
 
       {/* Additional Services */}
       <div className="additional-services">
