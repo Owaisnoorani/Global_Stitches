@@ -38,7 +38,8 @@ const OrderForm = () => {
         }
       });
 
-      const response = await fetch('http://localhost:5000/api/submit-order', {
+      // Use relative path for API endpoint to work both locally and in production
+      const response = await fetch('/api/submit-order', {
         method: 'POST',
         body: formDataToSend
       });

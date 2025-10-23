@@ -3,9 +3,10 @@ const path = require('path');
 const fs = require('fs');
 const { sendEmail } = require('./utils');
 
-// Make sure uploads directory exists
-const uploadsDir = path.join(process.cwd(), 'uploads');
-if (!fs.existsSync(uploadsDir)) {
+// In serverless environments like Vercel, we need to use /tmp for file uploads
+// as it's the only writable directory
+const uploadsDir = process.env.VERCEL ? '/tmp' : path.join(process.cwd(), 'uploads');
+if (!process.env.VERCEL && !fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
 }
 
@@ -103,7 +104,9 @@ module.exports = async (req, res) => {
       `,
       attachments: file ? [{
         filename: file.originalname,
-        path: file.path
+        path: file.path,
+        // Add content type to help with attachment handling
+        contentType: file.mimetype
       }] : []
     };
 
@@ -148,7 +151,8 @@ module.exports = async (req, res) => {
     console.error('Error submitting order:', error);
     res.status(500).json({
       success: false,
-      message: 'Error submitting order. Please try again.'
+      message: 'Error submitting order. Please try again.',
+      error: process.env.NODE_ENV === 'development' ? error.message : undefined
     });
   }
 };
