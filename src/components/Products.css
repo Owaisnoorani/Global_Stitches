@@ -2,128 +2,179 @@
 
 .products-section {
   text-align: center;
-  margin: 60px 0;
-  padding: 0 20px;
+  margin: 0;
+  padding: 5rem 2rem;
+  background: #ffffff;
 }
 
 .products-heading {
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 3rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.products-heading:first-of-type {
+  margin-top: 0;
+}
+
+.products-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #b58e8e, #716f6f);
+  border-radius: 2px;
 }
 
 .products-subtext {
-  font-size: 16px;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 750px;
+  margin: 1.5rem auto 3rem auto;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-  padding: 0 10px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding: 0;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 0;
   text-align: center;
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: rgba(181, 142, 142, 0.3);
 }
 
 .product-card img {
   width: 100%;
-  max-height: 200px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
 }
 
 .product-card h3 {
-  margin: 12px 0 6px 0;
-  font-size: 18px;
-  color: #222;
+  margin: 1.2rem 1rem 0.5rem;
+  font-size: 1.15rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .product-card p {
-  color: #444;
+  color: #666;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin: 0 1rem 1.2rem;
+  font-size: 1rem;
 }
 
 .view-btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 16px;
-  background: #2d6cdf;
+  margin: 0 1rem 1.5rem;
+  padding: 0.75rem 1.8rem;
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
   color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 6px;
-  transition: background 0.3s;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .view-btn:hover {
-  background: #1e4bb8;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* ================= Responsive ================= */
 @media (max-width: 1024px) {
+  .products-section {
+    padding: 4rem 1.5rem;
+  }
   .products-heading {
-    font-size: 24px;
+    font-size: 2.2rem;
   }
   .products-subtext {
-    font-size: 15px;
+    font-size: 1.05rem;
     padding: 0 10px;
+  }
+  .products-grid {
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .products-section {
-    margin: 40px 0;
+    padding: 3rem 1.2rem;
   }
   .products-heading {
-    font-size: 22px;
+    font-size: 2rem;
   }
   .products-subtext {
-    font-size: 14px;
+    font-size: 1rem;
   }
   .products-grid {
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
   }
-  .product-card {
-    padding: 12px;
+  .product-card img {
+    height: 200px;
   }
 }
 
 @media (max-width: 480px) {
+  .products-section {
+    padding: 2.5rem 1rem;
+  }
   .products-heading {
-    font-size: 20px;
+    font-size: 1.75rem;
   }
   .products-subtext {
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
   }
   .product-card h3 {
-    font-size: 16px;
+    font-size: 1.1rem;
   }
   .product-card p {
-    font-size: 13px;
+    font-size: 0.95rem;
   }
   .view-btn {
-    font-size: 13px;
-    padding: 8px 12px;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
   }
 }
