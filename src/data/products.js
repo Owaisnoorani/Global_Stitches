@@ -707,7 +707,7 @@ const products = [
     rating: 3,
     description: "Stylish logo patch for clothing.",
     image: "/gallery/100.jpeg",
-  }
+  },
 ];
 
 export default products;

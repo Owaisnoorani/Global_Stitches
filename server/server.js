@@ -189,6 +189,81 @@ app.post('/api/submit-order', upload.single('designFile'), async (req, res) => {
   }
 });
 
+// API endpoint for review submission
+app.post('/api/submit-review', async (req, res) => {
+  try {
+    const {
+      productId,
+      productName,
+      rating,
+      comment,
+      customerName,
+      customerEmail
+    } = req.body;
+
+    // Validate required fields
+    if (!productName || !rating || !comment) {
+      return res.status(400).json({
+        success: false,
+        message: 'Product name, rating, and comment are required'
+      });
+    }
+
+    // Email content to admin
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER, // Send to your email
+      subject: `New Review for ${productName} - Global Stitches`,
+      html: `
+        <h2>New Product Review Submitted</h2>
+        
+        <h3>Product Information:</h3>
+        <p><strong>Product ID:</strong> ${productId}</p>
+        <p><strong>Product Name:</strong> ${productName}</p>
+        <p><strong>Rating:</strong> ${'⭐'.repeat(rating)} (${rating}/5)</p>
+        
+        <h3>Review:</h3>
+        <p style="background: #f5f5f5; padding: 15px; border-radius: 8px; border-left: 4px solid #d9534f;">
+          ${comment}
+        </p>
+        
+        ${customerName ? `<h3>Customer Details:</h3>
+        <p><strong>Name:</strong> ${customerName}</p>` : ''}
+        ${customerEmail ? `<p><strong>Email:</strong> ${customerEmail}</p>` : ''}
+        
+        <hr>
+        <p><em>This review was submitted from the Global Stitches website.</em></p>
+        <p><small>Submitted on: ${new Date().toLocaleString()}</small></p>
+      `
+    };
+
+    // Send email (only if transporter is configured)
+    if (transporter) {
+      try {
+        await transporter.sendMail(mailOptions);
+        console.log('Review email sent successfully');
+      } catch (emailError) {
+        console.log('Email sending failed:', emailError.message);
+        // Continue without failing the request
+      }
+    } else {
+      console.log('Email not configured - review saved without sending email');
+    }
+
+    res.status(200).json({
+      success: true,
+      message: 'Review submitted successfully!'
+    });
+
+  } catch (error) {
+    console.error('Error submitting review:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Error submitting review. Please try again.'
+    });
+  }
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ status: 'Server is running!' });

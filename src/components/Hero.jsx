@@ -17,15 +17,16 @@ const Hero = () => {
     <section className="hero fadeIn">
       <h2>Premium Embroidery Services Worldwide</h2>
       <p>
-        Professional logo patches and embroidery designs for businesses, brands,
-        and organizations across the globe.
+        We specialize in creating high-quality custom logo patches and embroidery designs for businesses, brands, and organizations worldwide.
+        With a focus on precision, creativity, and fast turnaround, we deliver designs that elevate your brand identity and ensure every stitch reflects excellence. 
+        Whether you need digitized artwork for apparel, promotional items, or professional branding, our team provides top-tier quality and service trusted by clients across the globe.
       </p>
       <div className="btn-container">
         <button className="btn btn-order" onClick={handleOrderNow}>
           Order Now
         </button>
         <button className="btn btn-gallery" onClick={() => navigate("/gallery")}>
-          View Gallery
+          View Digitizing Designs
         </button>
       </div>
     </section>

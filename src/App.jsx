@@ -7,8 +7,6 @@ import AboutUs from "./components/AboutUs";
 import LoginSignup from "./components/LoginSignup"; 
 import Footer from "./components/Footer";  
 import Designs from "./components/Designs";
-import ClothingLogos from "./components/ClothingLogos"; 
-import LogoPatches from "./components/LogoPatches"; // 👈 New import
 
 const App = () => {
   return (
@@ -19,9 +17,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/designs" element={<Designs />} /> 
-        <Route path="/clothing-logos" element={<ClothingLogos />} /> 
-        <Route path="/logo-patches" element={<LogoPatches />} /> {/* 👈 New Page */}
+        <Route path="/designs" element={<Designs />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/login" element={<LoginSignup />} /> 
       </Routes>

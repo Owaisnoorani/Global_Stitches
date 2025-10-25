@@ -10,14 +10,64 @@ const ProductDetail = () => {
   const [rating, setRating] = useState(0); // ⭐ ab hamesha empty start
   const [comment, setComment] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   if (!product) return <div style={{ padding: "2rem" }}>Product not found</div>;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ productId: product.id, rating, comment });
-    setSubmitted(true);
-    setComment("");
+    
+    // Validate inputs
+    if (!rating) {
+      setError("Please select a rating");
+      return;
+    }
+    if (!comment.trim()) {
+      setError("Please write a review");
+      return;
+    }
+
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch('http://localhost:5000/api/submit-review', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          productId: product.id,
+          productName: product.name,
+          rating: rating,
+          comment: comment,
+          // Optional: Add customer details if you want to collect them
+          // customerName: '',
+          // customerEmail: ''
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setComment("");
+        setRating(0);
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 5000);
+      } else {
+        setError(data.message || 'Failed to submit review');
+      }
+    } catch (error) {
+      console.error('Error submitting review:', error);
+      setError('Failed to submit review. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -54,13 +104,25 @@ const ProductDetail = () => {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             placeholder="Write your feedback here..."
+            disabled={loading}
+            required
           />
-          <button className="submit-btn" type="submit">
-            Submit review
+          {error && (
+            <p style={{ color: "#d9534f", marginTop: "0.5rem", fontSize: "0.95rem" }}>
+              ⚠️ {error}
+            </p>
+          )}
+          <button 
+            className="submit-btn" 
+            type="submit"
+            disabled={loading}
+            style={{ opacity: loading ? 0.7 : 1 }}
+          >
+            {loading ? "Submitting..." : "Submit review"}
           </button>
           {submitted && (
-            <p style={{ color: "green" }}>
-              ✅ Thank you — your review is saved (demo).
+            <p style={{ color: "#5cb85c", marginTop: "0.5rem", fontSize: "0.95rem" }}>
+              ✅ Thank you! Your review has been submitted successfully.
             </p>
           )}
         </form>

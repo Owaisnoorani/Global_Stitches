@@ -7,7 +7,7 @@ import "./Products.css"; // agar alag css file chahiye
 const Products = () => {
   return (
     <section className="products-section">
-      <h2 className="products-heading">Logo Patches Collection</h2>
+      {/* <h2 className="products-heading">Logo Patches Collection</h2>
       <p className="products-subtext">
         Professional embroidered logo patches for businesses and organizations.
       </p>
@@ -15,10 +15,10 @@ const Products = () => {
       <h2 className="products-heading">Clothing Logos Collection</h2>
       <p className="products-subtext">
         Custom embroidered logos for apparel and clothing items...
-      </p>
+      </p> */}
 
       <div className="products-grid">
-        {products.slice(0, 6).map((product) => (
+        {products.slice(0, 8).map((product) => (
           <div key={product.id} className="product-card">
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>

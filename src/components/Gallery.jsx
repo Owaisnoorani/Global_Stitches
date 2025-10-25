@@ -8,7 +8,13 @@ const Gallery = () => {
 
   return (
     <div className="gallery-page">
-      <h2>Our Products</h2>
+      <div className="gallery-hero">
+        <h1>Digitizing Logo Design</h1>
+        <p>
+          Explore our collection of premium digitized logo designs. Each design is crafted with precision 
+          and attention to detail, ready for embroidery on any fabric.
+        </p>
+      </div>
       <div className="gallery-grid">
         {products.map((p) => (
           <div

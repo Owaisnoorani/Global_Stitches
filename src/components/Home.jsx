@@ -13,11 +13,11 @@ const Home = () => {
 
       {/* Products Section */}
       <section className="products-section">
-        <h2 className="products-heading">Logo Patches Collection</h2>
+        {/* <h2 className="products-heading">Logo Patches Collection</h2>
         <p className="products-subtext">
           Professional embroidered logo patches for businesses and organizations. <br />
           <span>Clothing Logos Collection:</span> Custom embroidered logos for apparel and clothing items.
-        </p>
+        </p> */}
 
         {/* Products Grid */}
         <Products />

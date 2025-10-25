@@ -40,10 +40,8 @@ const Header = () => {
       <nav className={menuOpen ? "nav active" : "nav"}>
         <ul>
           <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
-          <li><Link to="/designs" onClick={() => setMenuOpen(false)}>Our Designs</Link></li>
-          <li><Link to="/logo-patches" onClick={() => setMenuOpen(false)}>Logo Patches</Link></li>
-          <li><Link to="/clothing-logos" onClick={() => setMenuOpen(false)}>Clothing Logos</Link></li>
+          <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Digitizing Designs</Link></li>
+          <li><Link to="/designs" onClick={() => setMenuOpen(false)}>Vector Designs</Link></li>
           <li>
             <button className="nav-link-btn" onClick={() => handleScroll("pricing")}>
               Pricing

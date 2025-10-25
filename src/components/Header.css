@@ -9,7 +9,13 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideDown 0.6s ease-out;
+}
+
+.header.scrolled {
+  padding: 0.8rem 5%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
 }
 
 .header h1 {
@@ -53,8 +59,9 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #b58e8e;
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #b58e8e, #716f6f);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
 }
 
 .nav ul li a:hover {
@@ -85,8 +92,9 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #b58e8e;
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #b58e8e, #716f6f);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
 }
 
 .nav-link-btn:hover {
@@ -106,15 +114,39 @@
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   order: 2;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.login-btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .login-btn:hover {
   background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login-btn:active {
+  transform: translateY(-1px) scale(0.98);
 }
 
 /* 🔽 Mobile styles */
