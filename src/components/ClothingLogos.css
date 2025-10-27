@@ -126,27 +126,56 @@
 
 @media (max-width: 480px) {
   .clothing-page {
-    padding: 2rem 5%;
+    padding: 2rem 0.8rem;
+  }
+  .clothing-hero {
+    margin-bottom: 2rem;
   }
   .clothing-hero h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
   .clothing-hero p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+  }
+  .clothing-section {
+    margin: 2rem 0;
   }
   .clothing-text h2 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
   }
-  .clothing-text p,
+  .clothing-text p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
   .clothing-text ul li {
     font-size: 0.85rem;
+    margin: 0.4rem 0;
+  }
+  .clothing-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .clothing-closing {
+    margin-top: 3rem;
   }
   .clothing-closing h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  .clothing-closing p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0.8rem 0 1.5rem;
   }
   .explore-btn {
     width: 100%;
-    padding: 0.9rem;
+    max-width: 280px;
+    padding: 0.85rem;
     font-size: 0.9rem;
     border-radius: 8px;
   }

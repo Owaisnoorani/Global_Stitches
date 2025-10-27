@@ -124,17 +124,51 @@ body {
 
 /* ===== Responsive Design ===== */
 @media (max-width: 480px) {
+  .auth-container {
+    padding: 15px;
+  }
+
   .auth-box {
-    padding: 30px 20px;
+    padding: 25px 18px;
+    border-radius: 10px;
   }
 
   .auth-box h2 {
-    font-size: 22px;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .auth-box p {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .auth-form {
+    gap: 12px;
+  }
+
+  .form-group {
+    padding: 10px;
+    border-radius: 7px;
+  }
+
+  .form-group input {
+    font-size: 13px;
   }
 
   .auth-btn {
     font-size: 14px;
     padding: 10px;
+    border-radius: 7px;
+  }
+
+  .auth-footer {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .switch-btn {
+    font-size: 13px;
   }
 }
 

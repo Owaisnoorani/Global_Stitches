@@ -285,36 +285,63 @@ textarea {
 
 @media (max-width: 480px) {
   .order-form {
-    padding: 2.5rem 1rem;
-  }
-
-  .form-container {
-    padding: 1.5rem 1rem;
-  }
-
-  .form-section {
-    padding: 1.5rem;
+    padding: 1.5rem 0.5rem;
   }
 
   .form-heading {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
   }
 
   .form-subtext {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .form-container {
+    padding: 1.5rem 0.8rem;
+    gap: 1.5rem;
+  }
+
+  .form-section {
+    padding: 1.2rem;
   }
 
   .section-heading {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .form-row select,
+  .form-row input,
+  textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  textarea {
+    min-height: 100px;
   }
 
   .file-upload {
-    padding: 2rem 1rem;
+    padding: 1.5rem 0.8rem;
+  }
+
+  .upload-label p {
+    font-size: 0.95rem;
+  }
+
+  .small-text {
+    font-size: 0.85rem;
   }
 
   .submit-btn {
     width: 100%;
     max-width: 100%;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
   }
 }

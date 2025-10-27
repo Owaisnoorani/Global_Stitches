@@ -28,7 +28,13 @@ const Header = () => {
 
   return (
     <header className="header slideDown">
-      <h1>
+      <h1 
+        onClick={() => {
+          navigate("/");
+          window.scrollTo({ top: 0, behavior: 'instant' });
+        }}
+        style={{ cursor: 'pointer' }}
+      >
         Global <span>Stitches.co</span>
       </h1>
 
@@ -39,9 +45,39 @@ const Header = () => {
 
       <nav className={menuOpen ? "nav active" : "nav"}>
         <ul>
-          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Digitizing Designs</Link></li>
-          <li><Link to="/designs" onClick={() => setMenuOpen(false)}>Vector Designs</Link></li>
+          <li>
+            <Link 
+              to="/" 
+              onClick={() => {
+                setMenuOpen(false);
+                window.scrollTo({ top: 0, behavior: 'instant' });
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/gallery" 
+              onClick={() => {
+                setMenuOpen(false);
+                window.scrollTo({ top: 0, behavior: 'instant' });
+              }}
+            >
+              Digitizing Designs
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/designs" 
+              onClick={() => {
+                setMenuOpen(false);
+                window.scrollTo({ top: 0, behavior: 'instant' });
+              }}
+            >
+              Vector Designs
+            </Link>
+          </li>
           <li>
             <button className="nav-link-btn" onClick={() => handleScroll("pricing")}>
               Pricing
@@ -54,10 +90,6 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-
-      <Link to="/login" onClick={() => setMenuOpen(false)}>
-        <button className="login-btn">Admin Login</button>
-      </Link>
     </header>
   );
 };

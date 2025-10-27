@@ -7,10 +7,12 @@ import AboutUs from "./components/AboutUs";
 import LoginSignup from "./components/LoginSignup"; 
 import Footer from "./components/Footer";  
 import Designs from "./components/Designs";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Header />
       
       <Routes>

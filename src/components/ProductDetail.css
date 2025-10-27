@@ -170,7 +170,14 @@
 /* 📱 Mobile Friendly */
 @media (max-width: 767px) {
   .product-detail {
-    padding: 15px;
+    padding: 12px;
+    margin: 1rem auto;
+    gap: 15px;
+  }
+
+  .product-image img {
+    width: 100%;
+    max-width: 320px;
   }
 
   .product-info {
@@ -179,27 +186,45 @@
   }
 
   .product-info h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
   }
 
   .product-info p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+
+  .price {
+    font-size: 1.25rem;
+    margin: 10px 0;
   }
 
   .rating-section {
     text-align: center;
+    margin: 15px 0;
   }
 
   .star {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-right: 4px;
+  }
+
+  .comment-section h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
   }
 
   .comment-section textarea {
     max-width: 100%;
-    font-size: 0.95rem;
+    height: 100px;
+    font-size: 0.9rem;
+    padding: 10px;
   }
 
   .submit-btn {
     width: 100%;
+    padding: 10px 24px;
+    font-size: 0.95rem;
   }
 }

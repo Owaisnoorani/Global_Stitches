@@ -540,11 +540,23 @@
 
 @media (max-width: 480px) {
   .pricing-section {
-    padding: 2rem 1rem;
+    padding: 1.5rem 0.5rem;
+    margin: 2rem auto;
   }
 
   .pricing-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-cards {
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .card {
+    min-width: 100%;
+    padding: 2rem 1.5rem;
   }
 
   .card-icon {
@@ -553,27 +565,58 @@
   }
 
   .card-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
   .card h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
   }
 
   .card span {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .card ul li {
+    font-size: 0.9rem;
+    padding: 0.7rem 0;
+  }
+
+  .order-btn {
+    font-size: 0.95rem;
+    padding: 0.9rem 1.8rem;
+  }
+
+  .service {
+    min-width: 100%;
+    padding: 1.5rem 1.2rem;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service span {
+    font-size: 1.3rem;
+  }
+
+  .comparison {
+    margin-top: 3rem;
+    padding: 0 0.5rem;
   }
 
   .comparison h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
   }
 
   .table-header,
   .table-row {
     grid-template-columns: 1fr;
-    padding: 1rem;
-    gap: 0.8rem;
+    padding: 1rem 0.8rem;
+    gap: 0.6rem;
   }
 
   .table-header {
@@ -584,17 +627,17 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 0.8rem;
   }
 
   .table-cell {
     text-align: left !important;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .table-cell.service-name {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
   }
 
   .table-cell::before {
@@ -602,8 +645,8 @@
     font-weight: 700;
     color: #2d2d2d;
     display: block;
-    margin-bottom: 0.3rem;
-    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
   }
 
@@ -611,21 +654,20 @@
     display: none;
   }
 
-  .price-badge,
-  .time-badge {
-    display: inline-block;
+  .price-badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
     margin-top: 0.3rem;
   }
 
-  .card {
-    min-width: 100%;
+  .time-badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+    margin-top: 0.3rem;
   }
 
   .example {
     min-width: 100%;
-  }
-
-  .service {
-    min-width: 100%;
+    padding: 0.8rem;
   }
 }

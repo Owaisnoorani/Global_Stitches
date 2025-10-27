@@ -245,16 +245,23 @@
 
 @media (max-width: 500px) {
   .header {
-    padding: 0.9rem 3%;
+    padding: 0.7rem 3%;
   }
   
   .header h1 { 
-    font-size: 1.3rem; 
+    font-size: 1.15rem;
+    letter-spacing: -0.3px;
   }
   
   .login-btn {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .nav ul li a,
+  .nav-link-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
   }
 }
 
