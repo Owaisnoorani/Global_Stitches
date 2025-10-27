@@ -17,7 +17,7 @@ const AboutUs = () => {
 
         <div className="about-image">
           <img
-            src="public\gallery\4.jpeg"
+            src="/gallery/4.jpeg"
             alt="About Global Stitches"
           />
         </div>

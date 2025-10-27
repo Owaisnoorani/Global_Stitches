@@ -50,6 +50,13 @@
   position: relative;
   padding: 0.5rem 0;
   font-size: 0.95rem;
+  outline: none;
+  border: none;
+}
+
+.nav ul li a:focus {
+  outline: none;
+  border: none;
 }
 
 .nav ul li a::after {
@@ -66,9 +73,16 @@
 
 .nav ul li a:hover {
   color: #1a1a1a;
+  transform: translateY(-1px);
 }
 
-.nav ul li a:hover::after {
+.nav ul li a:active {
+  transform: translateY(0);
+}
+
+.nav ul li a:hover::after,
+.nav ul li a:focus::after,
+.nav ul li a:active::after {
   width: 100%;
 }
 
@@ -83,6 +97,17 @@
   position: relative;
   padding: 0.5rem 0;
   font-size: 0.95rem;
+  outline: none;
+}
+
+.nav-link-btn:focus {
+  outline: none;
+  border: none;
+}
+
+.nav-link-btn:active {
+  outline: none;
+  border: none;
 }
 
 .nav-link-btn::after {
@@ -99,9 +124,16 @@
 
 .nav-link-btn:hover {
   color: #1a1a1a;
+  transform: translateY(-1px);
 }
 
-.nav-link-btn:hover::after {
+.nav-link-btn:active {
+  transform: translateY(0);
+}
+
+.nav-link-btn:hover::after,
+.nav-link-btn:focus::after,
+.nav-link-btn:active::after {
   width: 100%;
 }
 

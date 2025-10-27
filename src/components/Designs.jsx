@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import products from "../data/products";
+import vectorProduct from "../data/vectorProduct";
 import "./Designs.css";
 
 const Designs = () => {
@@ -20,21 +20,21 @@ const Designs = () => {
 
       {/* Products Grid */}
       <div className="designs-grid">
-        {products.map((product) => (
+        {vectorProduct.map((vectorProduct) => (
           <div
-            key={product.id}
+            key={vectorProduct.id}
             className="design-card"
-            onClick={() => navigate(`/product/${product.id}`)}
+            onClick={() => navigate(`/product/${vectorProduct.id}`)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => { if (e.key === "Enter") navigate(`/product/${product.id}`); }}
+            onKeyDown={(e) => { if (e.key === "Enter") navigate(`/product/${vectorProduct.id}`); }}
           >
             <div className="design-img">
-              <img src={product.image} alt={product.name} loading="lazy" />
+              <img src={vectorProduct.image} alt={vectorProduct.name} loading="lazy" />
             </div>
-            <h3>{product.name}</h3>
-            <p className="price">{product.price}</p>
-            <p className="rating">{"⭐".repeat(product.rating)}</p>
+            <h3>{vectorProduct.name}</h3>
+            <p className="price">{vectorProduct.price}</p>
+            <p className="rating">{"⭐".repeat(vectorProduct.rating)}</p>
           </div>
         ))}
       </div>
