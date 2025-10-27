@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import products from "../data/products";
+import vectorProduct from "../data/vectorProduct";
 import "./ProductDetail.css";
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const product = products.find((p) => p.id === Number(id));
+  const location = useLocation();
+  
+  // Check if we came from vector designs page
+  const isVectorProduct = location.state?.isVector || false;
+  
+  // Find product from the correct array
+  const product = isVectorProduct 
+    ? vectorProduct.find((p) => p.id === Number(id))
+    : products.find((p) => p.id === Number(id));
 
   const [rating, setRating] = useState(0); // ⭐ ab hamesha empty start
   const [comment, setComment] = useState("");
@@ -32,7 +41,10 @@ const ProductDetail = () => {
     setError("");
 
     try {
-      const response = await fetch('http://localhost:5000/api/submit-review', {
+      // Use environment variable for production, fallback to localhost for development
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      
+      const response = await fetch(`${API_URL}/api/submit-review`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

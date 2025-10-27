@@ -24,10 +24,10 @@ const Designs = () => {
           <div
             key={vectorProduct.id}
             className="design-card"
-            onClick={() => navigate(`/product/${vectorProduct.id}`)}
+            onClick={() => navigate(`/product/${vectorProduct.id}`, { state: { isVector: true } })}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => { if (e.key === "Enter") navigate(`/product/${vectorProduct.id}`); }}
+            onKeyDown={(e) => { if (e.key === "Enter") navigate(`/product/${vectorProduct.id}`, { state: { isVector: true } }); }}
           >
             <div className="design-img">
               <img src={vectorProduct.image} alt={vectorProduct.name} loading="lazy" />
